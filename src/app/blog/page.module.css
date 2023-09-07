@@ -1,3 +1,27 @@
 .blog {
-  background-color: red;
+}
+
+.blog__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 50px;
+}
+
+.image__container {
+  height: 250px;
+  width: 400px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.text__title {
+  margin-bottom: 10px;
+}
+.text__desc {
+  font-size: 18px;
+  color: #999;
 }

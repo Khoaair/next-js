@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import style from './page.module.css';
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 
 const Navbar = () => {
   const links = [
@@ -18,6 +19,7 @@ const Navbar = () => {
         KhoaAir
       </Link>
       <div className={style.nav__links}>
+        <DarkModeToggle />
         {links.map(link => (
           <Link href={link.url} key={link.id} className={style.nav__link}>
             {link.title}

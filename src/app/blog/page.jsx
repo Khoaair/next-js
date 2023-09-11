@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import Link from 'next/link';
 
 const getData = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+  const res = await fetch('http://localhost:3000/api/posts', {
     cache: 'no-store',
   });
   if (!res.ok) {
@@ -20,12 +20,12 @@ const Blog = async () => {
         return (
           <Link
             key={item.id}
-            href={`/blog/${item.id}`}
+            href={`/blog/${item._id}`}
             className={styles.blog__container}
           >
             <div className={styles.image__container}>
               <Image
-                src='https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                src={item.image}
                 alt=''
                 className={styles.image}
                 width={400}
@@ -34,7 +34,7 @@ const Blog = async () => {
             </div>
             <div className={styles.text__container}>
               <h1 className={styles.text__title}>{item.title}</h1>
-              <p className={styles.text__desc}>{item.body}</p>
+              <p className={styles.text__desc}>{item.desc}</p>
             </div>
           </Link>
         );

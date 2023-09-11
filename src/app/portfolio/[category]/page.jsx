@@ -15,7 +15,6 @@ const getData = cat => {
 };
 const Category = ({ params }) => {
   const data = getData(params.category);
-  console.log(data);
   return (
     <div className={styles.category}>
       <h1 className={styles.category__heading}>{params.category}</h1>

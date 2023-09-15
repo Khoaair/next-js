@@ -1,6 +1,58 @@
 .dashboard {
   display: flex;
+  gap: 100px;
+}
+
+.dashboard__posts {
+  flex: 1;
+}
+
+.dashboard__post {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.post__image {
+  width: 200px;
+  height: 100px;
+  position: relative;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.post__delete {
+  cursor: pointer;
+  color: red;
+}
+
+.dashboard__form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__input,
+.form__textarea {
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid #bbb;
+  color: inherit;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form__button {
+  padding: 20px;
+  cursor: pointer;
+  background-color: #53c28b;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  font-weight: bold;
 }
